@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/yd22.v1.css" />
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script type="module">
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        direction: "vertical", // vertical, horizontal
+        gestureDirection: "vertical", // vertical, horizontal, both
+        smooth: true,
+        mouseMultiplier: 2,
+        smoothTouch: false,
+        touchMultiplier: 1,
+        infinite: false,
+      });
+
+      //get scroll value
+      lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+        console.log({ scroll, limit, velocity, direction, progress });
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+    <style type="text/css">
+      .messages-speaker-title {
+        font-weight: 700;
+        margin-bottom: 2px;
+        text-transform: uppercase;
+        font-size: 15px;
+        color: #488e9a;
+      }
+      .messages,
+      .speaker {
+        position: relative;
+        padding-top: 800px;
+      }
+      .messages {
+        padding-top: 750px;
+      }
+      .speaker,
+      .messages p {
+        margin-bottom: 5px;
+        line-height: 20px;
+        font-size: 14px;
+      }
+      .mobile-menu,
+      .m-student-detail {
+        display: none;
+      }
+      .yd-modal {
+        display: none;
+      }
+      .message-from21 {
+        font-size: 15px;
+        color: #000;
+        font-family: "Be Vietnam", sans-serif;
+      }
+      .message-from21 h1 {
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+      .message-from21 h2 {
+        font-weight: 400;
+        margin-bottom: 2px;
+      }
+      .yd21-text-green {
+        color: #038589;
+      }
+      .quote21 {
+        font-weight: 700;
+        color: #038589;
+        font-size: 16px;
+        margin-top: 10px;
+        font-style: italic;
+      }
+      .bg-credits21 {
+        background-color: #306162;
+        margin-top: 750px;
+      }
+      .credits21 {
+        color: #fff;
+        font-family: "Be Vietnam", sans-serif;
+      }
+      .credits21 h1 {
+        text-transform: uppercase;
+        font-weight: 600;
+        display: inline-block;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 2px;
+      }
+      .credits21 h1:hover {
+        cursor: pointer;
+      }
+      .credit-list h3 {
+        font-weight: 700;
+        margin: 10px 0 5px 0;
+        text-transform: uppercase;
+      }
+      .credit-list h4 {
+        font-weight: 600;
+        margin-top: 5px;
+      }
+      .credit-list p {
+        font-weight: 400;
+        margin-bottom: 10px;
+      }
+      #backtoTop {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 1000;
+        visibility: hidden;
+      }
+      .btp i {
+        line-height: 40px;
+        text-align: center;
+        font-size: 20px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: #f1b81b;
+        color: #fff;
+        border-radius: 50%;
+      }
+      .btp i:hover {
+        cursor: pointer;
+      }
+      #backtoTop.show {
+        opacity: 1;
+        visibility: visible;
+      }
+      @media only screen and (max-width: 768px) {
+        .bg-credits21 {
+          background-color: #306162;
+          margin-top: 0px;
+        }
+        .mobile-menu {
+          display: block;
+        }
+        .messages {
+          position: relative;
+          top: 0;
+        }
+        .yd-modal {
+          height: 100%;
+          z-index: 1050;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: none;
+          overflow: hidden;
+          overflow-y: scroll;
+        }
+        .mobile-navbar-img {
+          width: 60%;
+          height: auto;
+        }
+        .fa-close {
+          font-size: 28px;
+          margin-left: 18px;
+          margin-top: 2px;
+        }
+        .m-discipline-list ul {
+          padding: 0px;
+          margin-bottom: 0;
+        }
+        .m-discipline-list > ul > li {
+          color: #fff;
+          font-weight: 700;
+          font-size: 15px;
+          padding: 7px 0;
+        }
+        .m-discipline-list > ul > li > ul > li {
+          color: #fff;
+          font-weight: 500;
+          font-size: 15px;
+          padding: 7px 0;
+        }
+        .m-discipline-list-21 a {
+          display: block;
+          color: #fff;
+          font-size: 15px;
+          padding-bottom: 15px;
+          margin-left: 5px;
+          -webkit-transition: all 0.3s linear 0s;
+          transition: all 0.3s linear 0s;
+        }
+        .on {
+        }
+        .horizontal-menu-link {
+          font-size: 14px;
+          display: block;
+          color: white;
+          text-decoration: none;
+          padding: 7px;
+          letter-spacing: 1px;
+          font-weight: 600;
+        }
+      }
+    </style>
+    <title>YD22 :: Landing</title>
+  </head>
+
+  <body>
+    <nav class="desktop-menu">
+      <div>
+        <div class="container-fluid py-3 px-5 bg-g">
+          <div class="row justify-content-between">
+            <div class="col-1 text-left my-auto">
+              <a href="https://nid.edu/"
+                ><img
+                  src="./images/conv42.png"
+                  alt=""
+                  style="width: 6vw; height: auto"
+              /></a>
+            </div>
+            <div class="col-9">
+              <div class="col">
+                <div class="row design-faculty-bar align_center">
+                  <div class="col rounded-pill text-center">
+                    <a href="discipline.php?q=afd" class=""
+                      ><span class="d-inline-block rounded-pill df-name"
+                        >COMMUNICATION DESIGN</span
+                      ></a
+                    >
+                  </div>
+                  <div class="col rounded-pill text-center">
+                    <a href="discipline.php?q=cgd" class=""
+                      ><span class="d-inline-block rounded-pill df-name"
+                        >INDUSTRIAL DESIGN</span
+                      ></a
+                    >
+                  </div>
+                  <div class="col rounded-pill text-center">
+                    <a href="discipline.php?q=dre" class=""
+                      ><span class="d-inline-block rounded-pill df-name"
+                        >INTERDISCIPLINARY DESIGN</span
+                      ></a
+                    >
+                  </div>
+
+                  <div class="col rounded-pill text-center">
+                    <a href="discipline.php?q=dgd"
+                      ><span class="d-inline-block rounded-pill df-name"
+                        >IT INTEGRATED</span
+                      ></a
+                    >
+                  </div>
+                  <div class="col-3 rounded-pill text-center">
+                    <a href="discipline.php?q=td" class=""
+                      ><span class="d-inline-block df-name rounded-pill"
+                        >TEXTILE, APPAREL, LIFESTYLE &amp; ACCESSORY
+                        DESIGN</span
+                      ></a
+                    >
+                  </div>
+                  <div class="col rounded-pill text-center">
+                    <a href="discipline.php?q=td" class=""
+                      ><span class="d-inline-block df-name rounded-pill"
+                        >SORT BY GUIDE</span
+                      ></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1 text-right my-auto">
+              <a href="https://youngdesigners.nid.edu/"
+                ><img
+                  src="./images/nid-logo.png"
+                  alt=""
+                  style="width: 8vw; height: auto; filter: invert(1)"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid position-relative messages">
+      <div class="container-fluid w-75">
+        <div class="messages-speaker-title pt-5">CONVOCATION SPEAKER</div>
+        <div class="row py-5 mb-4">
+          <div class="col-sm-4">
+            <img src="./images/patrick-whitney.jpg" />
+            <div class="mt-2 message-from21 yd21-text-green">
+              <h1>Prof. Patrick Whitney</h1>
+              <h2>Professor in Residence,</h2>
+              <h2>Harvard T.H. Chan School of Public Health</h2>
+            </div>
+          </div>
+          <div class="col-sm-8 px-3">
+            <p>
+              Prof. Patrick Whitney, is a Professor in Residence, Harvard T.H.
+              Chan School of Public Health.
+            </p>
+            <p>
+              In 1979, Prof. Whitney was appointed Associate Professor and Chair
+              of the Division of Design at Minneapolis College of Art and
+              Design. Five years later, he was appointed Associate Professor and
+              Head of Communication Design at the Institute of Design (ID),
+              Illinois Institute of Technology (IIT). In 1987, he was appointed
+              Professor and Director, and then Dean of ID.
+            </p>
+            <p>
+              As the Dean of the Institute of Design (ID), he was the
+              Steelcase/Robert C. Pew Professor of Design and an IIT
+              distinguished professor.
+            </p>
+            <p>
+              During his leadership of ID, the school created the first PhD
+              program in design in the USA, transformed ID into a leading
+              institution in design methods and theory, and created an executive
+              education program translating design to organizational leadership.
+            </p>
+            <p>
+              Prof. Whitney is widely regarded as a thought leader for
+              pioneering the notions of humancentred design and strategic
+              design. He conducts executive seminars and advises many
+              organizations including Aetna, BP, Godrej &amp; Boyce (Mumbai),
+              Proctor &amp; Gamble, SC Johnson, Texas Instruments, and
+              government agencies in Denmark, Hong Kong, India, and the UK.
+            </p>
+            <p>
+              Business Week has featured him as a design visionary for bringing
+              together design and business; Forbes named him as one of six
+              members of the ‘E-Gang’ for his work in human centred design; Fast
+              Company has identified him as a ‘master of design’ for his
+              leadership in the design field of linking the creation of value
+              for users and economic value for companies; and Global
+              Entrepreneur Magazine named him one of 25 people worldwide doing
+              the most to bring new ideas to business in China.
+            </p>
+            <p>
+              Prof. Whitney has a Bachelor of Fine Arts in Visual Communication
+              Design at the University of Alberta, and a Master of Fine Arts in
+              Design at the Cranbrook Academy of Art.
+            </p>
+            <p>
+              Currently, at the Harvard T.H. Chan School of Public Health, he
+              looks to bring design methods to this school and his work focuses
+              on the behavioural side of health.
+            </p>
+            <p>
+              His research projects relate to:<br />
+              - Why do TB patients in India drop out a successful treatment
+              protocol?<br />
+              - What does ‘nature” mean to different ethnic groups in the
+              USA?<br />
+              - How to increase the effectiveness of communication among a large
+              number of social service organizations in India.
+            </p>
+            <p>
+              In addition to speaking at many international design events, he
+              also speaks at gatherings of people from other fields about topics
+              such as innovation, sustainability, human well-being sustainable
+              and humanizing technology including TED, China Daily CEO Summit,
+              the Conference Board, and the Delhi Sustainable Development
+              Summit.
+            </p>
+          </div>
+        </div>
+        <div class="row p-5 mb-4 bg-g rounded">
+          <div class="col-sm-4">
+            <img src="./images/patrick-whitney.jpg" />
+            <div class="mt-2 message-from21 yd21-text-green">
+              <h1>Prof. Patrick Whitney</h1>
+              <h2>Professor in Residence,</h2>
+              <h2>Harvard T.H. Chan School of Public Health</h2>
+            </div>
+          </div>
+          <div class="col-sm-8 px-3">
+            <p>
+              Prof. Patrick Whitney, is a Professor in Residence, Harvard T.H.
+              Chan School of Public Health.
+            </p>
+            <p>
+              In 1979, Prof. Whitney was appointed Associate Professor and Chair
+              of the Division of Design at Minneapolis College of Art and
+              Design. Five years later, he was appointed Associate Professor and
+              Head of Communication Design at the Institute of Design (ID),
+              Illinois Institute of Technology (IIT). In 1987, he was appointed
+              Professor and Director, and then Dean of ID.
+            </p>
+            <p>
+              As the Dean of the Institute of Design (ID), he was the
+              Steelcase/Robert C. Pew Professor of Design and an IIT
+              distinguished professor.
+            </p>
+            <p>
+              During his leadership of ID, the school created the first PhD
+              program in design in the USA, transformed ID into a leading
+              institution in design methods and theory, and created an executive
+              education program translating design to organizational leadership.
+            </p>
+            <p>
+              Prof. Whitney is widely regarded as a thought leader for
+              pioneering the notions of humancentred design and strategic
+              design. He conducts executive seminars and advises many
+              organizations including Aetna, BP, Godrej &amp; Boyce (Mumbai),
+              Proctor &amp; Gamble, SC Johnson, Texas Instruments, and
+              government agencies in Denmark, Hong Kong, India, and the UK.
+            </p>
+            <p>
+              Business Week has featured him as a design visionary for bringing
+              together design and business; Forbes named him as one of six
+              members of the ‘E-Gang’ for his work in human centred design; Fast
+              Company has identified him as a ‘master of design’ for his
+              leadership in the design field of linking the creation of value
+              for users and economic value for companies; and Global
+              Entrepreneur Magazine named him one of 25 people worldwide doing
+              the most to bring new ideas to business in China.
+            </p>
+            <p>
+              Prof. Whitney has a Bachelor of Fine Arts in Visual Communication
+              Design at the University of Alberta, and a Master of Fine Arts in
+              Design at the Cranbrook Academy of Art.
+            </p>
+            <p>
+              Currently, at the Harvard T.H. Chan School of Public Health, he
+              looks to bring design methods to this school and his work focuses
+              on the behavioural side of health.
+            </p>
+            <p>
+              His research projects relate to:<br />
+              - Why do TB patients in India drop out a successful treatment
+              protocol?<br />
+              - What does ‘nature” mean to different ethnic groups in the
+              USA?<br />
+              - How to increase the effectiveness of communication among a large
+              number of social service organizations in India.
+            </p>
+            <p>
+              In addition to speaking at many international design events, he
+              also speaks at gatherings of people from other fields about topics
+              such as innovation, sustainability, human well-being sustainable
+              and humanizing technology including TED, China Daily CEO Summit,
+              the Conference Board, and the Delhi Sustainable Development
+              Summit.
+            </p>
+          </div>
+        </div>
+        <div class="row py-5 mb-4">
+          <div class="col-sm-4">
+            <img src="./images/patrick-whitney.jpg" />
+            <div class="mt-2 message-from21 yd21-text-green">
+              <h1>Prof. Patrick Whitney</h1>
+              <h2>Professor in Residence,</h2>
+              <h2>Harvard T.H. Chan School of Public Health</h2>
+            </div>
+          </div>
+          <div class="col-sm-8 px-3">
+            <p>
+              Prof. Patrick Whitney, is a Professor in Residence, Harvard T.H.
+              Chan School of Public Health.
+            </p>
+            <p>
+              In 1979, Prof. Whitney was appointed Associate Professor and Chair
+              of the Division of Design at Minneapolis College of Art and
+              Design. Five years later, he was appointed Associate Professor and
+              Head of Communication Design at the Institute of Design (ID),
+              Illinois Institute of Technology (IIT). In 1987, he was appointed
+              Professor and Director, and then Dean of ID.
+            </p>
+            <p>
+              As the Dean of the Institute of Design (ID), he was the
+              Steelcase/Robert C. Pew Professor of Design and an IIT
+              distinguished professor.
+            </p>
+            <p>
+              During his leadership of ID, the school created the first PhD
+              program in design in the USA, transformed ID into a leading
+              institution in design methods and theory, and created an executive
+              education program translating design to organizational leadership.
+            </p>
+            <p>
+              Prof. Whitney is widely regarded as a thought leader for
+              pioneering the notions of humancentred design and strategic
+              design. He conducts executive seminars and advises many
+              organizations including Aetna, BP, Godrej &amp; Boyce (Mumbai),
+              Proctor &amp; Gamble, SC Johnson, Texas Instruments, and
+              government agencies in Denmark, Hong Kong, India, and the UK.
+            </p>
+            <p>
+              Business Week has featured him as a design visionary for bringing
+              together design and business; Forbes named him as one of six
+              members of the ‘E-Gang’ for his work in human centred design; Fast
+              Company has identified him as a ‘master of design’ for his
+              leadership in the design field of linking the creation of value
+              for users and economic value for companies; and Global
+              Entrepreneur Magazine named him one of 25 people worldwide doing
+              the most to bring new ideas to business in China.
+            </p>
+            <p>
+              Prof. Whitney has a Bachelor of Fine Arts in Visual Communication
+              Design at the University of Alberta, and a Master of Fine Arts in
+              Design at the Cranbrook Academy of Art.
+            </p>
+            <p>
+              Currently, at the Harvard T.H. Chan School of Public Health, he
+              looks to bring design methods to this school and his work focuses
+              on the behavioural side of health.
+            </p>
+            <p>
+              His research projects relate to:<br />
+              - Why do TB patients in India drop out a successful treatment
+              protocol?<br />
+              - What does ‘nature” mean to different ethnic groups in the
+              USA?<br />
+              - How to increase the effectiveness of communication among a large
+              number of social service organizations in India.
+            </p>
+            <p>
+              In addition to speaking at many international design events, he
+              also speaks at gatherings of people from other fields about topics
+              such as innovation, sustainability, human well-being sustainable
+              and humanizing technology including TED, China Daily CEO Summit,
+              the Conference Board, and the Delhi Sustainable Development
+              Summit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-5">
+      <div class="row justify-content-between rounded-pill text-dark p-3 bg-g">
+        <a href=""><div class="col text-dark">Credits</div></a>
+        <a href=""> <div class="col text-right text-dark">← Go Back</div></a>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      let prevScrollPos = window.pageYOffset;
+      const navbar = document.querySelector("nav");
+
+      window.addEventListener("scroll", () => {
+        const currentScrollPos = window.pageYOffset;
+
+        if (prevScrollPos > currentScrollPos) {
+          navbar.style.transform = "translateY(0%)";
+        } else {
+          navbar.style.transform = "translateY(-100%)";
+        }
+
+        prevScrollPos = currentScrollPos;
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {});
+    </script>
+  </body>
+</html>
