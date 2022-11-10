@@ -228,6 +228,7 @@ a:hover {
 }
 
 .card-body {
+  max-width: 70%;
   padding: 0px;
   padding-left: 10px;
 }
