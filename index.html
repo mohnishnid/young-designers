@@ -214,11 +214,6 @@
         infinite: false,
       });
 
-      //get scroll value
-      lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-        console.log({ scroll, limit, velocity, direction, progress });
-      });
-
       function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
@@ -311,6 +306,34 @@
         </div>
       </div>
     </nav>
+
+    <div>
+      <div class="interesting-accordian1">
+        <div class="accordian bg-cmd">
+          <h1 class="accordian-titles">COMD</h1>
+          <p class="accordian-details">Communication Design</p>
+        </div>
+        <div class="accordian bg-idd">
+          <h1 class="accordian-titles">INDU</h1>
+          <p class="accordian-details">Industrial Design</p>
+        </div>
+        <div class="accordian bg-ind">
+          <h1 class="accordian-titles">INTD</h1>
+          <p class="accordian-details">Interdisciplinary Design</p>
+        </div>
+        <div class="accordian bg-itd">
+          <h1 class="accordian-titles">ITIN</h1>
+          <p class="accordian-details">IT Integrated</p>
+        </div>
+        <div class="accordian bg-txd">
+          <h1 class="accordian-titles">TALD</h1>
+          <p class="accordian-details">
+            Textile, Apparel, Lifestyle & Accessory Design
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="menu position-fixed" data-lenis-prevent>
       <img
         style="width: 30%; padding-top: 5vh"
@@ -389,32 +412,7 @@
         </ul>
       </div>
     </div>
-    <div>
-      <div class="interesting-accordian1">
-        <div class="accordian bg-cmd">
-          <h1 class="accordian-titles">COMD</h1>
-          <p class="accordian-details">Communication Design</p>
-        </div>
-        <div class="accordian bg-idd">
-          <h1 class="accordian-titles">INDU</h1>
-          <p class="accordian-details">Industrial Design</p>
-        </div>
-        <div class="accordian bg-ind">
-          <h1 class="accordian-titles">INTD</h1>
-          <p class="accordian-details">Interdisciplinary Design</p>
-        </div>
-        <div class="accordian bg-itd">
-          <h1 class="accordian-titles">ITIN</h1>
-          <p class="accordian-details">IT Integrated</p>
-        </div>
-        <div class="accordian bg-txd">
-          <h1 class="accordian-titles">TALD</h1>
-          <p class="accordian-details">
-            Textile, Apparel, Lifestyle & Accessory Design
-          </p>
-        </div>
-      </div>
-    </div>
+
     <section class="container-fluid position-relative messages">
       <div class="container-fluid w-75">
         <div class="messages-speaker-title pt-5">CONVOCATION SPEAKER</div>
@@ -702,19 +700,19 @@
     <script>
       var t1 = new TimelineMax({ paused: true });
 
-      t1.to(".one", 0.1, {
+      t1.to(".one", 0.2, {
         y: 6,
         rotation: 45,
         ease: Expo.easeInOut,
       });
 
-      t1.to(".two", 0.1, {
+      t1.to(".two", 0.2, {
         y: -6,
         rotation: -45,
         ease: Expo.easeInOut,
-        delay: -0.1,
+        delay: -0.2,
       });
-      t1.to(".menu", 0.3, {
+      t1.to(".menu", 0.4, {
         top: "0%",
         ease: Expo.easeInOut,
         delay: -0.3,

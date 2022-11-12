@@ -511,7 +511,7 @@ span.two {
 /* INTACC */
 .interesting-accordian1 {
   max-width: 90vw;
-  margin: 30vh 5vw 10vh 5vw;
+  padding: 30vh 5vw 10vh 5vw;
   box-sizing: content-box;
   display: flex;
   flex-direction: row;
