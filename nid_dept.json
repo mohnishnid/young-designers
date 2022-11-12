@@ -1,0 +1,44 @@
+{
+  "name": "NID",
+  "children": [
+    {
+      "name": "Young Designers",
+      "children": [
+        {
+          "name": "COMMUNICATION DESIGN",
+          "children": [
+            { "name": "Animation Film Design", "value": 19 },
+            { "name": "Ceramic and Glass Design", "value": 19 },
+            { "name": "Furniture & Interior Design", "value": 19 },
+            { "name": "Graphic Design", "value": 19 },
+            { "name": "Product Design", "value": 19 },
+            { "name": "Textile Design", "value": 19 },
+            { "name": "Film & Video Communication", "value": 19 }
+          ]
+        },
+        {
+          "name": "Gandhinagar Campus",
+          "children": [
+            { "name": "Apparel Design", "value": 19 },
+            { "name": "Lifestyle Accessory Design", "value": 19 },
+            { "name": "Strategic Design Management", "value": 19 },
+            { "name": "New Media Design", "value": 19 },
+            { "name": "Photography Design", "value": 19 },
+            { "name": "Toy & Game Design", "value": 19 },
+            { "name": "Transportation & Automobile Design", "value": 19 }
+          ]
+        },
+        {
+          "name": "Bengaluru",
+          "children": [
+            { "name": "Design for Retail Experience", "value": 19 },
+            { "name": "Digital Game Design", "value": 19 },
+            { "name": "Information Design", "value": 19 },
+            { "name": "Interaction Design", "value": 19 },
+            { "name": "Universal Design", "value": 19 }
+          ]
+        }
+      ]
+    }
+  ]
+}

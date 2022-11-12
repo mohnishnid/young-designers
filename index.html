@@ -6,36 +6,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link
+      rel="preload"
+      href="Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./css/yd22.v1.css" />
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
-    <script type="module">
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-        direction: "vertical", // vertical, horizontal
-        gestureDirection: "vertical", // vertical, horizontal, both
-        smooth: true,
-        mouseMultiplier: 2,
-        smoothTouch: false,
-        touchMultiplier: 1,
-        infinite: false,
-      });
 
-      //get scroll value
-      lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-        console.log({ scroll, limit, velocity, direction, progress });
-      });
-
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-    </script>
     <style type="text/css">
       .messages-speaker-title {
         font-weight: 700;
@@ -44,14 +26,16 @@
         font-size: 15px;
         color: #488e9a;
       }
+      .messages {
+        height: 100%;
+        padding-top: 20vh;
+      }
       .messages,
       .speaker {
         position: relative;
-        padding-top: 800px;
+        padding-top: 10vh;
       }
-      .messages {
-        padding-top: 750px;
-      }
+
       .speaker,
       .messages p {
         margin-bottom: 5px;
@@ -216,64 +200,101 @@
       }
     </style>
     <title>YD22 :: Landing</title>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script type="module">
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+        direction: "vertical", // vertical, horizontal
+        gestureDirection: "vertical", // vertical, horizontal, both
+        smooth: true,
+        mouseMultiplier: 2,
+        smoothTouch: false,
+        touchMultiplier: 1,
+        infinite: false,
+      });
+
+      //get scroll value
+      lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+        console.log({ scroll, limit, velocity, direction, progress });
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
   </head>
 
   <body>
     <nav class="desktop-menu">
       <div>
         <div class="container-fluid py-3 px-5 bg-g">
-          <div class="row justify-content-between">
-            <div class="col-1 text-left my-auto">
-              <a href="https://nid.edu/"
-                ><img
-                  src="./images/conv42.png"
-                  alt=""
-                  style="width: 6vw; height: auto"
-              /></a>
+          <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-around align-items-center">
+              <div class="col text-left my-auto">
+                <a href="./index.html"
+                  ><img
+                    src="./images/conv42.png"
+                    alt=""
+                    style="width: 6vw; height: auto"
+                /></a>
+              </div>
+              <div>•</div>
+              <div class="col text-right my-auto">
+                <a href=""
+                  ><img
+                    src="./images/nid-logo.png"
+                    alt=""
+                    style="width: 8vw; height: auto; filter: invert(1)"
+                /></a>
+              </div>
             </div>
             <div class="col-9">
               <div class="col">
                 <div class="row design-faculty-bar align_center">
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block rounded-pill df-name"
+                      ><span class="d-inline-block df-name hr-cmd"
                         >COMMUNICATION DESIGN</span
                       ></a
                     >
                   </div>
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block rounded-pill df-name"
+                      ><span class="d-inline-block df-name hr-idd"
                         >INDUSTRIAL DESIGN</span
                       ></a
                     >
                   </div>
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block rounded-pill df-name"
+                      ><span class="d-inline-block df-name hr-ind"
                         >INTERDISCIPLINARY DESIGN</span
                       ></a
                     >
                   </div>
 
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html"
-                      ><span class="d-inline-block rounded-pill df-name"
+                      ><span class="d-inline-block df-name hr-itd"
                         >IT INTEGRATED</span
                       ></a
                     >
                   </div>
-                  <div class="col-3 rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name rounded-pill"
+                      ><span class="d-inline-block df-name hr-txd"
                         >TEXTILE, APPAREL, LIFESTYLE &amp; ACCESSORY
                         DESIGN</span
                       ></a
                     >
                   </div>
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name rounded-pill"
+                      ><span class="d-inline-block df-name hr-sort"
                         >SORT BY GUIDE</span
                       ></a
                     >
@@ -281,20 +302,120 @@
                 </div>
               </div>
             </div>
-            <div class="col-1 text-right my-auto">
-              <a href=""
-                ><img
-                  src="./images/nid-logo.png"
-                  alt=""
-                  style="width: 8vw; height: auto; filter: invert(1)"
-              /></a>
+
+            <div class="toggle-btn">
+              <span class="one"></span>
+              <span class="two"></span>
             </div>
           </div>
         </div>
       </div>
     </nav>
+    <div class="menu position-fixed" data-lenis-prevent>
+      <img
+        style="width: 30%; padding-top: 5vh"
+        src="./images/conv42.png"
+        alt=""
+      />
+      <div class="data">
+        <ul id="accordion" class="accordion">
+          <li>
+            <div class="link hr-cmd">
+              <span>COMMUNICATION DESIGN</span> <span>+</span>
+            </div>
 
-    <div class="container-fluid position-relative messages">
+            <ul class="submenu">
+              <li><a href="#">Animation Film Design</a></li>
+              <li><a href="#">Exhibition Design</a></li>
+              <li><a href="#">Film & Video Communication</a></li>
+              <li><a href="#">Graphic Design </a></li>
+              <li><a href="#">Photography Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-idd">
+              <span>INDUSTRIAL DESIGN</span> <span>+</span>
+            </div>
+
+            <ul class="submenu">
+              <li><a href="#">Ceramic & Glass Design </a></li>
+              <li><a href="#">Furniture Design </a></li>
+              <li><a href="#">Furniture & Interior Design </a></li>
+              <li><a href="#">Product Design </a></li>
+              <li><a href="#">Transportation & Automobile Design </a></li>
+              <li><a href="#">Toy & Game Design </a></li>
+              <li><a href="#">Universal Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-txd">
+              <span>INTERDISCIPLINARY DESIGN</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Design for Retail Experience </a></li>
+              <li><a href="#">Strategic Design Management </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-itd">
+              <span>IT INTEGRATED</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Digital Game Design </a></li>
+              <li><a href="#">Information Design </a></li>
+              <li><a href="#">Interaction Design </a></li>
+              <li><a href="#">New Media Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-ind">
+              <span>TEXTILE, APPAREL, LIFESTYLE &amp; ACCESSORY DESIGN</span>
+              <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Apparel Design </a></li>
+              <li><a href="#">Lifestyle Accessory Design </a></li>
+              <li><a href="#">Textile Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-sort">
+              <span>SORT BY GUIDE</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Guides</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="interesting-accordian1">
+        <div class="accordian bg-cmd">
+          <h1 class="accordian-titles">COMD</h1>
+          <p class="accordian-details">Communication Design</p>
+        </div>
+        <div class="accordian bg-idd">
+          <h1 class="accordian-titles">INDU</h1>
+          <p class="accordian-details">Industrial Design</p>
+        </div>
+        <div class="accordian bg-ind">
+          <h1 class="accordian-titles">INTD</h1>
+          <p class="accordian-details">Interdisciplinary Design</p>
+        </div>
+        <div class="accordian bg-itd">
+          <h1 class="accordian-titles">ITIN</h1>
+          <p class="accordian-details">IT Integrated</p>
+        </div>
+        <div class="accordian bg-txd">
+          <h1 class="accordian-titles">TALD</h1>
+          <p class="accordian-details">
+            Textile, Apparel, Lifestyle & Accessory Design
+          </p>
+        </div>
+      </div>
+    </div>
+    <section class="container-fluid position-relative messages">
       <div class="container-fluid w-75">
         <div class="messages-speaker-title pt-5">CONVOCATION SPEAKER</div>
         <div class="row py-5 mb-4">
@@ -538,19 +659,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="container-fluid p-5">
       <div class="row justify-content-between rounded-pill text-dark p-3 bg-g">
         <a href=""><div class="col text-dark">Credits</div></a>
         <a href="./index.html">
-          <div class="col text-right text-dark">← Go Back</div></a
+          <div class="col text-right text-dark">← Go to Home Page</div></a
         >
       </div>
     </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      src="https://code.jquery.com/jquery-3.3.1.js"
       type="text/javascript"
     ></script>
     <script
@@ -577,6 +698,81 @@
         prevScrollPos = currentScrollPos;
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+      var t1 = new TimelineMax({ paused: true });
+
+      t1.to(".one", 0.1, {
+        y: 6,
+        rotation: 45,
+        ease: Expo.easeInOut,
+      });
+
+      t1.to(".two", 0.1, {
+        y: -6,
+        rotation: -45,
+        ease: Expo.easeInOut,
+        delay: -0.1,
+      });
+      t1.to(".menu", 0.3, {
+        top: "0%",
+        ease: Expo.easeInOut,
+        delay: -0.3,
+      });
+
+      t1.staggerFrom(
+        ".menu ul li div",
+        0.2,
+        { x: 100, opacity: 0, ease: Expo.easeInOut },
+        0.08
+      );
+
+      t1.reverse();
+      $(document).on("click", ".toggle-btn", function () {
+        t1.reversed(!t1.reversed());
+      });
+
+      t1.reverse();
+      $(document).on("click", "a", function () {
+        t1.reversed(!t1.reversed());
+      });
+
+      $(function () {
+        var Accordion = function (el, multiple) {
+          this.el = el || {};
+          this.multiple = multiple || false;
+
+          // Variables privadas
+          var links = this.el.find(".link");
+          // Evento
+          links.on(
+            "click",
+            { el: this.el, multiple: this.multiple },
+            this.dropdown
+          );
+        };
+
+        Accordion.prototype.dropdown = function (e) {
+          var $el = e.data.el;
+          ($this = $(this)), ($next = $this.next());
+
+          $next.slideToggle();
+          $this.parent().toggleClass("open");
+
+          if (!e.data.multiple) {
+            $el
+              .find(".submenu")
+              .not($next)
+              .slideUp()
+              .parent()
+              .removeClass("open");
+          }
+        };
+
+        var accordion = new Accordion($("#accordion"), false);
+      });
+    </script>
+
     <script type="text/javascript">
       $(document).ready(function () {});
     </script>

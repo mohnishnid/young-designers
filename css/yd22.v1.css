@@ -28,6 +28,9 @@ nav {
   margin-bottom: 100px;
   transition: 0.8s transform ease;
 }
+nav img:hover {
+  opacity: 0.7;
+}
 a:hover {
   text-decoration: none;
 }
@@ -149,6 +152,36 @@ a:hover {
   background-color: #c91e59;
 }
 
+hr {
+  width: 95%;
+
+  border-top: #505050 solid 2px;
+}
+
+/* inter diciplinary */
+.hr-cmd {
+  border-bottom: #f1b81b solid 10px;
+}
+
+.hr-idd {
+  border-bottom: #f36f21 solid 10px;
+}
+
+.hr-txd {
+  border-bottom: #664191 solid 10px;
+}
+
+.hr-itd {
+  border-bottom: #3567b2 solid 10px;
+}
+
+.hr-ind {
+  border-bottom: #c91e59 solid 10px;
+}
+.hr-sort {
+  border-bottom: #488e9a solid 10px;
+}
+
 /* inter diciplinary */
 .bg-sort {
   background-color: #488e9a;
@@ -189,11 +222,12 @@ a:hover {
 }
 
 .bg-g {
+  border-radius: 0px 0px 3vw 3vw;
   background-color: #e6e6e6;
 }
 
 .align_center {
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 
@@ -228,7 +262,7 @@ a:hover {
 }
 
 .card-body {
-  max-width: 70%;
+  max-width: 60%;
   padding: 0px;
   padding-left: 10px;
 }
@@ -251,9 +285,9 @@ a:hover {
 
 .project-title {
   color: #488e9a;
-  font-size: 21px;
+  font-size: 30px;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   line-height: 25px;
 }
 
@@ -287,7 +321,7 @@ a.current-discipline,
 }
 
 .student-detail {
-  margin-bottom: 60px;
+  margin-bottom: 0;
 }
 
 .sponsor-list {
@@ -322,6 +356,217 @@ a.current-discipline,
   width: 260px;
   height: 260px;
 }
+
+.toggle-btn {
+  position: relative;
+  margin-top: 1vw;
+  margin-right: 1vw;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  z-index: 1;
+}
+.toggle-btn:hover {
+  opacity: 0.7;
+}
+span.one {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #000;
+}
+span.two {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #000;
+  margin-top: 12px;
+}
+.menu {
+  z-index: 99;
+  position: fixed;
+  background-color: #d9d9d9;
+  height: 100vh;
+  width: 30%;
+  top: -100%;
+  right: 0;
+  border-radius: 0px 0px 0px 144px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.data {
+  text-align: left;
+}
+.data ul {
+  list-style: none;
+}
+.data ul li {
+  color: #777;
+}
+.data li:first-child {
+  font-size: calc(12px + 0.5vw);
+}
+.data li:not(:first-child) {
+  font-size: calc(12px + 0.5vw);
+}
+
+.accordion {
+  width: 100%;
+  max-width: 768px;
+  padding: 3vw;
+}
+
+.accordion .link {
+  width: 100%;
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 15px 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: calc(12px + 0.5vw);
+  font-weight: 600;
+
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+}
+
+.accordion li i {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  font-size: 18px;
+  color: #595959;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+  right: 12px;
+  left: auto;
+  font-size: 16px;
+}
+
+.accordion li.open .link {
+  color: #202020;
+}
+
+.accordion li.open i {
+  color: #b63b4d;
+}
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+
+.submenu {
+  display: none;
+
+  font-size: 14px;
+}
+
+.submenu li {
+  border-bottom: 1px solid #bcbcbc;
+}
+
+.submenu li:last-child {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #808080;
+  padding: 12px;
+  padding-left: 35px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  font-weight: 400;
+}
+
+.submenu a:hover {
+  font-weight: bold;
+  background: #bcbcbc;
+  color: #303030;
+}
+
+/* INTACC */
+.interesting-accordian1 {
+  max-width: 90vw;
+  margin: 30vh 5vw 10vh 5vw;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.interesting-accordian1 .accordian {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  width: 10vw;
+  padding: auto;
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.5s ease;
+  border-radius: 200px;
+}
+
+.interesting-accordian1 .accordian-titles {
+  position: absolute;
+
+  text-align: center;
+  transition: all 0.5s ease;
+  font-size: 1.5vw;
+}
+
+.interesting-accordian1 .accordian-details {
+  width: 20vw;
+  opacity: 0;
+  font-weight: bold;
+  overflow: visible;
+  position: absolute;
+  text-align: center;
+  font-size: 1.2vw;
+  transition: opacity 0.5s linear;
+}
+
+.interesting-accordian1 .accordian:hover {
+  width: 20vw;
+}
+
+.interesting-accordian1 .accordian:hover .accordian-titles {
+  opacity: 0;
+}
+
+.interesting-accordian1 .accordian:hover .accordian-details {
+  opacity: 1;
+}
+
 @media only screen and (max-width: 768px) {
   .square-img {
     width: 100%;

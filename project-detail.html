@@ -6,10 +6,19 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link
+      rel="preload"
+      href="Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./css/yd22.v1.css" />
+
+    <title>YD22 :: Landing</title>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script type="module">
       const lenis = new Lenis({
@@ -36,67 +45,75 @@
 
       requestAnimationFrame(raf);
     </script>
-
-    <title>YD22 :: Landing</title>
   </head>
 
   <body>
     <nav class="desktop-menu">
       <div>
         <div class="container-fluid py-3 px-5 bg-g">
-          <div class="row justify-content-between">
-            <div class="col-1 text-left my-auto">
-              <a href="https://nid.edu/"
-                ><img
-                  src="./images/conv42.png"
-                  alt=""
-                  style="width: 6vw; height: auto"
-              /></a>
+          <div class="row justify-content-between align-items-center">
+            <div class="row justify-content-around align-items-center">
+              <div class="col text-left my-auto">
+                <a href="./index.html"
+                  ><img
+                    src="./images/conv42.png"
+                    alt=""
+                    style="width: 6vw; height: auto"
+                /></a>
+              </div>
+              <div>•</div>
+              <div class="col text-right my-auto">
+                <a href=""
+                  ><img
+                    src="./images/nid-logo.png"
+                    alt=""
+                    style="width: 8vw; height: auto; filter: invert(1)"
+                /></a>
+              </div>
             </div>
             <div class="col-9">
               <div class="col">
                 <div class="row design-faculty-bar align_center">
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block rounded-pill df-name"
+                      ><span class="d-inline-block df-name hr-cmd"
                         >COMMUNICATION DESIGN</span
                       ></a
                     >
                   </div>
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block rounded-pill df-name"
+                      ><span class="d-inline-block df-name hr-idd"
                         >INDUSTRIAL DESIGN</span
                       ></a
                     >
                   </div>
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block rounded-pill df-name"
+                      ><span class="d-inline-block df-name hr-ind"
                         >INTERDISCIPLINARY DESIGN</span
                       ></a
                     >
                   </div>
 
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html"
-                      ><span
-                        class="d-inline-block text-light rounded-pill bg-itd df-name"
+                      ><span class="d-inline-block df-name hr-itd"
                         >IT INTEGRATED</span
                       ></a
                     >
                   </div>
-                  <div class="col-3 rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name rounded-pill"
+                      ><span class="d-inline-block df-name hr-txd"
                         >TEXTILE, APPAREL, LIFESTYLE &amp; ACCESSORY
                         DESIGN</span
                       ></a
                     >
                   </div>
-                  <div class="col rounded-pill text-center">
+                  <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name rounded-pill"
+                      ><span class="d-inline-block df-name hr-sort"
                         >SORT BY GUIDE</span
                       ></a
                     >
@@ -104,13 +121,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-1 text-right my-auto">
-              <a href="https://youngdesigners.nid.edu/"
-                ><img
-                  src="./images/nid-logo.png"
-                  alt=""
-                  style="width: 8vw; height: auto; filter: invert(1)"
-              /></a>
+
+            <div class="toggle-btn">
+              <span class="one"></span>
+              <span class="two"></span>
             </div>
           </div>
         </div>
@@ -156,6 +170,84 @@
         </div>
       </div>
     </nav>
+    <div class="menu" data-lenis-prevent>
+      <img
+        style="width: 30%; padding-top: 5vh"
+        src="./images/conv42.png"
+        alt=""
+      />
+      <div class="data">
+        <ul id="accordion" class="accordion">
+          <li>
+            <div class="link hr-cmd">
+              <span>COMMUNICATION DESIGN</span> <span>+</span>
+            </div>
+
+            <ul class="submenu">
+              <li><a href="#">Animation Film Design</a></li>
+              <li><a href="#">Exhibition Design</a></li>
+              <li><a href="#">Film & Video Communication</a></li>
+              <li><a href="#">Graphic Design </a></li>
+              <li><a href="#">Photography Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-idd">
+              <span>INDUSTRIAL DESIGN</span> <span>+</span>
+            </div>
+
+            <ul class="submenu">
+              <li><a href="#">Ceramic & Glass Design </a></li>
+              <li><a href="#">Furniture Design </a></li>
+              <li><a href="#">Furniture & Interior Design </a></li>
+              <li><a href="#">Product Design </a></li>
+              <li><a href="#">Transportation & Automobile Design </a></li>
+              <li><a href="#">Toy & Game Design </a></li>
+              <li><a href="#">Universal Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-txd">
+              <span>INTERDISCIPLINARY DESIGN</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Design for Retail Experience </a></li>
+              <li><a href="#">Strategic Design Management </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-itd">
+              <span>IT INTEGRATED</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Digital Game Design </a></li>
+              <li><a href="#">Information Design </a></li>
+              <li><a href="#">Interaction Design </a></li>
+              <li><a href="#">New Media Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-ind">
+              <span>TEXTILE, APPAREL, LIFESTYLE &amp; ACCESSORY DESIGN</span>
+              <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Apparel Design </a></li>
+              <li><a href="#">Lifestyle Accessory Design </a></li>
+              <li><a href="#">Textile Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-sort">
+              <span>SORT BY GUIDE</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Guides</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="container-fluid w-75 mx-auto" style="padding-top: 25vh">
       <div class="row">
         <div class="col-xs-12 col-sm-3">
@@ -188,26 +280,6 @@
           <div class="project-title">
             Digital Vaccination Tracker for Children Aged 0 through 18 Years
           </div>
-          <div class="project-synopsis mb-4">
-            The project aimed to design a vaccination tracker with a reminder
-            feature for Mfine users and the doctor app. The first phase of the
-            project was to handle the data entry for digital vaccination for
-            doctors. Primary and secondary research was carried out to
-            understand the context and needs of the doctors better. The
-            solutions were iterated to improve the autofill feature and
-            information representation of the interface. After designing the
-            feature for the doctors, the data entry interface was designed for
-            users. The iterations varied based on ease of use and user delight.
-            Lastly, a vaccination reminder flow was designed for parents to
-            notify them about due dates. After several iterations, the designs
-            were approved by the product manager. As a final handoff, the design
-            mocks were consolidated and sent to the team for application
-            development.
-            <div class="my-2">
-              <b>Keywords:</b> child immunization, digital health records,
-              healthcare, vaccination reminder, vaccination tracker
-            </div>
-          </div>
           <div class="student-detail">
             <div class="student-name">
               <b>Student Name:</b> Bharat Bhusan Apat
@@ -218,6 +290,44 @@
             </div>
             <div class="sponsor">
               <b>Sponsor:</b> Mfine, Novocura Tech Health Services - Bangalore
+            </div>
+          </div>
+          <div class="project-synopsis mt-4 mb-4">
+            <b>Project Synopsis:</b> <br />
+            Microsoft Family Safety empowers Families to create healthy habits
+            and protect them with digital and physical safety features. The
+            product today provides capabilities that empower families to control
+            screen time restrictions, filter contents, control spending, impose
+            restrictions on gaming and track physical location, etc. These
+            capabilities are available across various devices like Xbox, Windows
+            PC, and Android & iOS. However, today, it’s a complicated process
+            for both parents and kids to perform all necessary actions on the
+            product to fully utilize the benefits provided by the product. Even
+            though both parents and kids understand the benefits of using such a
+            product, there is a lack of motivation and delight that drives the
+            users to perform necessary actions. Relook at the existing Family
+            safety application with the aim to make it inclusive, engaging, and
+            fun for all family members, including kids. Thereby, gamifying the
+            overall experience and empowering them to engage with the system.
+            The aim was to conduct an inquiry about the various ways a user can
+            be motivated to engage with the product using methods of
+            gamification. Identifying as many potential user jobs in the Family
+            Safety product that can be driven for increased engagement using
+            gamification. Coming up with Design solutions that augment existing
+            features of Family Safety with aspects of gamification to drive user
+            engagement and encourage desired behaviour. The outcome was a
+            gamified solution, composed of game mechanics and rewards measured
+            against the Octalysis framework. The final concept was an
+            amalgamation of Intrinsic and extrinsic rewards, containing an
+            underlying story to encourage kids to empathize with the character,
+            thereby staying motivated to achieve their goals set by the parents.
+            The elements of User Experience by Jesse James Garrett and the 5
+            principles of Visual Design were applied to make the overall
+            experience usable, useful, and delightful.
+
+            <div class="my-5">
+              <b>Keywords:</b> child immunization, digital health records,
+              healthcare, vaccination reminder, vaccination tracker
             </div>
           </div>
         </div>
@@ -254,13 +364,13 @@
       <div class="row justify-content-between rounded-pill text-dark p-3 bg-g">
         <a href=""><div class="col text-dark">Credits</div></a>
         <a href="./index.html">
-          <div class="col text-right text-dark">← Go Back</div></a
+          <div class="col text-right text-dark">← Go to Home Page</div></a
         >
       </div>
     </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      src="https://code.jquery.com/jquery-3.3.1.js"
       type="text/javascript"
     ></script>
     <script
@@ -287,6 +397,81 @@
         prevScrollPos = currentScrollPos;
       });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script>
+      var t1 = new TimelineMax({ paused: true });
+
+      t1.to(".one", 0.1, {
+        y: 6,
+        rotation: 45,
+        ease: Expo.easeInOut,
+      });
+
+      t1.to(".two", 0.1, {
+        y: -6,
+        rotation: -45,
+        ease: Expo.easeInOut,
+        delay: -0.1,
+      });
+      t1.to(".menu", 0.3, {
+        top: "0%",
+        ease: Expo.easeInOut,
+        delay: -0.3,
+      });
+
+      t1.staggerFrom(
+        ".menu ul li div",
+        0.2,
+        { x: 100, opacity: 0, ease: Expo.easeInOut },
+        0.08
+      );
+
+      t1.reverse();
+      $(document).on("click", ".toggle-btn", function () {
+        t1.reversed(!t1.reversed());
+      });
+
+      t1.reverse();
+      $(document).on("click", "a", function () {
+        t1.reversed(!t1.reversed());
+      });
+
+      $(function () {
+        var Accordion = function (el, multiple) {
+          this.el = el || {};
+          this.multiple = multiple || false;
+
+          // Variables privadas
+          var links = this.el.find(".link");
+          // Evento
+          links.on(
+            "click",
+            { el: this.el, multiple: this.multiple },
+            this.dropdown
+          );
+        };
+
+        Accordion.prototype.dropdown = function (e) {
+          var $el = e.data.el;
+          ($this = $(this)), ($next = $this.next());
+
+          $next.slideToggle();
+          $this.parent().toggleClass("open");
+
+          if (!e.data.multiple) {
+            $el
+              .find(".submenu")
+              .not($next)
+              .slideUp()
+              .parent()
+              .removeClass("open");
+          }
+        };
+
+        var accordion = new Accordion($("#accordion"), false);
+      });
+    </script>
+
     <script type="text/javascript">
       $(document).ready(function () {});
     </script>
