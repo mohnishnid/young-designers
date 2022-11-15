@@ -43,9 +43,13 @@
   </head>
 
   <body>
+    <div class="preloader-gif">
+      <img src="./load.gif" />
+    </div>
+
     <nav class="desktop-menu">
       <div>
-        <div class="container-fluid pt-2 pb-3 px-5 bg-g">
+        <div class="container-fluid pt-2 pb-3 px-5 bg-b-g">
           <div class="row justify-content-between align-items-center">
             <div class="row justify-content-around align-items-center">
               <div class="col text-left my-auto">
@@ -119,7 +123,7 @@
                     <div class="hr-txd-inactive"></div>
                   </div>
                   <div class="col text-center">
-                    <a href="./discipline-wise-student-list.html" class=""
+                    <a href="./guide-list.html" class=""
                       ><span class="d-inline-block df-name"
                         >SORT BY GUIDE</span
                       ></a
@@ -129,18 +133,13 @@
                 </div>
               </div>
             </div>
-
-            <div class="toggle-btn">
-              <span class="one"></span>
-              <span class="two"></span>
-            </div>
           </div>
         </div>
       </div>
-      <div class="row d-flex justify-content-around mx-2">
-        <div class="col-2 p-3 discipline-bar border_r_bottom_s">
-          <div class="row justify-content-center">
-            <div class="col text-center bg-itd rounded-pill">
+      <div class="container-fluid bg-itd p-2">
+        <div class="container-fluid w-90 discipline-bar">
+          <div class="row justify-content-md-arround">
+            <div class="col text-center current active-itd rounded">
               <a href="./discipline-wise-student-list.html?q=intd"
                 >Interaction Design</a
               >
@@ -150,26 +149,22 @@
               >
               <a href="./discipline-wise-student-list.html?q=intd"> </a>
             </div>
-          </div>
-        </div>
-        <div class="col-7 p-3 discipline-bar bg-itd border_r_bottom">
-          <div class="row justify-content-md-center">
-            <div class="col text-center current rounded-pill">
+            <div class="col text-center current rounded">
               <a href="./discipline-wise-student-list.html"
                 >Digital Game Design</a
               >
             </div>
-            <div class="col text-center current rounded-pill">
+            <div class="col text-center current rounded">
               <a href="./discipline-wise-student-list.html?q=id"
                 >Information Design</a
               >
             </div>
-            <div class="col text-center current active-itd rounded-pill">
+            <div class="col text-center current active-itd rounded">
               <a href="./discipline-wise-student-list.html?q=intd"
                 >Interaction Design</a
               >
             </div>
-            <div class="col text-center current rounded-pill">
+            <div class="col text-center current rounded">
               <a href="./discipline-wise-student-list.html?q=nmd"
                 >New Media Design</a
               >
@@ -480,6 +475,15 @@
       });
     </script>
 
+    <script>
+      function preloadAnimation() {
+        setTimeout(showPage, 1200);
+      }
+      function showPage() {
+        document.querySelectorAll(".preloader-gif")[0].style.display = "none";
+      }
+      window.onload = preloadAnimation();
+    </script>
     <script type="text/javascript">
       $(document).ready(function () {});
     </script>

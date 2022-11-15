@@ -104,6 +104,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
 .df-name {
@@ -313,10 +314,21 @@ hr {
 .discipline-bar .col {
   padding: 12px 3px;
   text-align: center;
+  margin: auto;
   transition: 0.6s ease;
 }
 
 .discipline-bar .col a {
+  color: #fff;
+}
+.discipline-bar .col-3 {
+  padding: 12px 3px;
+
+  text-align: center;
+  transition: 0.6s ease;
+}
+
+.discipline-bar .col-3 a {
   color: #fff;
 }
 
@@ -325,6 +337,9 @@ hr {
 }
 
 .bg-g {
+  background-color: #f1f1f1;
+}
+.bg-b-g {
   background-color: #fff;
   border-bottom: 1px solid lightgrey;
 }
@@ -488,12 +503,12 @@ span.two {
 .menu {
   z-index: 99;
   position: fixed;
-  background-color: lightgrey;
+  background-color: white;
   height: 100vh;
   width: 30%;
   top: -100%;
   right: 0;
-  border: 1px solid lightgrey;
+  border: 2px solid lightgrey;
   padding-top: 15vh;
   overflow-x: hidden;
   overflow-y: scroll;
