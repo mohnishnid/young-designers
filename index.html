@@ -6,13 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      rel="preload"
-      href="Mona-Sans.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
@@ -224,9 +218,13 @@
   </head>
 
   <body>
+    <div class="preloader-gif">
+      <img src="./load.gif" />
+    </div>
+
     <nav class="desktop-menu">
       <div>
-        <div class="container-fluid py-3 px-5 bg-g">
+        <div class="container-fluid pt-2 pb-3 px-5 bg-g">
           <div class="row justify-content-between align-items-center">
             <div class="row justify-content-around align-items-center">
               <div class="col text-left my-auto">
@@ -247,52 +245,58 @@
                 /></a>
               </div>
             </div>
-            <div class="col-9">
-              <div class="col">
+            <div class="col-9 p-0">
+              <div class="col p-0">
                 <div class="row design-faculty-bar align_center">
                   <div class="col text-center">
-                    <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name hr-cmd"
+                    <a href="./discipline-wise-student-list.html" class="">
+                      <span class="d-inline-block df-name"
                         >COMMUNICATION DESIGN</span
                       ></a
                     >
+                    <div class="hr-cmd-inactive"></div>
                   </div>
                   <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name hr-idd"
+                      ><span class="d-inline-block df-name"
                         >INDUSTRIAL DESIGN</span
                       ></a
                     >
+                    <div class="hr-idd-inactive"></div>
                   </div>
                   <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name hr-ind"
+                      ><span class="d-inline-block df-name"
                         >INTERDISCIPLINARY DESIGN</span
                       ></a
                     >
+                    <div class="hr-ind-inactive"></div>
                   </div>
 
                   <div class="col text-center">
                     <a href="./discipline-wise-student-list.html"
-                      ><span class="d-inline-block df-name hr-itd"
+                      ><span class="d-inline-block df-name"
                         >IT INTEGRATED</span
                       ></a
                     >
+                    <div class="hr-itd-inactive"></div>
                   </div>
-                  <div class="col text-center">
+                  <div class="col justify-content-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name hr-txd"
+                      ><span class="d-inline-block df-name"
                         >TEXTILE, APPAREL, LIFESTYLE &amp; ACCESSORY
                         DESIGN</span
                       ></a
                     >
+                    <div class="hr-txd-inactive"></div>
                   </div>
                   <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
-                      ><span class="d-inline-block df-name hr-sort"
+                      ><span class="d-inline-block df-name"
                         >SORT BY GUIDE</span
                       ></a
                     >
+                    <div class="hr-sort-inactive"></div>
                   </div>
                 </div>
               </div>
@@ -354,7 +358,9 @@
               <li><a href="#">Graphic Design </a></li>
               <li><a href="#">Photography Design </a></li>
             </ul>
+            <div class="hr-cmd-active w-90"></div>
           </li>
+
           <li>
             <div class="link hr-idd">
               <span>INDUSTRIAL DESIGN</span> <span>+</span>
@@ -369,6 +375,7 @@
               <li><a href="#">Toy & Game Design </a></li>
               <li><a href="#">Universal Design </a></li>
             </ul>
+            <div class="hr-idd-active w-90"></div>
           </li>
           <li>
             <div class="link hr-txd">
@@ -378,6 +385,7 @@
               <li><a href="#">Design for Retail Experience </a></li>
               <li><a href="#">Strategic Design Management </a></li>
             </ul>
+            <div class="hr-txd-active w-90"></div>
           </li>
           <li>
             <div class="link hr-itd">
@@ -389,6 +397,7 @@
               <li><a href="#">Interaction Design </a></li>
               <li><a href="#">New Media Design </a></li>
             </ul>
+            <div class="hr-itd-active w-90"></div>
           </li>
           <li>
             <div class="link hr-ind">
@@ -400,6 +409,7 @@
               <li><a href="#">Lifestyle Accessory Design </a></li>
               <li><a href="#">Textile Design </a></li>
             </ul>
+            <div class="hr-ind-active w-90"></div>
           </li>
           <li>
             <div class="link hr-sort">
@@ -408,6 +418,7 @@
             <ul class="submenu">
               <li><a href="#">Guides</a></li>
             </ul>
+            <div class="hr-sort-active w-90"></div>
           </li>
         </ul>
       </div>
@@ -721,7 +732,7 @@
       t1.staggerFrom(
         ".menu ul li div",
         0.2,
-        { x: 100, opacity: 0, ease: Expo.easeInOut },
+        { y: -100, opacity: 0, ease: Expo.easeInOut },
         0.08
       );
 
@@ -770,7 +781,15 @@
         var accordion = new Accordion($("#accordion"), false);
       });
     </script>
-
+    <script>
+      function preloadAnimation() {
+        setTimeout(showPage, 1200);
+      }
+      function showPage() {
+        document.querySelectorAll(".preloader-gif")[0].style.display = "none";
+      }
+      window.onload = preloadAnimation();
+    </script>
     <script type="text/javascript">
       $(document).ready(function () {});
     </script>
