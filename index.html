@@ -12,187 +12,6 @@
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./css/yd22.v1.css" />
 
-    <style type="text/css">
-      .messages-speaker-title {
-        font-weight: 700;
-        margin-bottom: 2px;
-        text-transform: uppercase;
-        font-size: 15px;
-        color: #488e9a;
-      }
-      .messages {
-        height: 100%;
-        padding-top: 20vh;
-      }
-      .messages,
-      .speaker {
-        position: relative;
-        padding-top: 10vh;
-      }
-
-      .speaker,
-      .messages p {
-        margin-bottom: 5px;
-        line-height: 20px;
-        font-size: 14px;
-      }
-      .mobile-menu,
-      .m-student-detail {
-        display: none;
-      }
-      .yd-modal {
-        display: none;
-      }
-      .message-from21 {
-        font-size: 15px;
-        color: #000;
-        font-family: "Be Vietnam", sans-serif;
-      }
-      .message-from21 h1 {
-        font-weight: 700;
-        margin-bottom: 2px;
-      }
-      .message-from21 h2 {
-        font-weight: 400;
-        margin-bottom: 2px;
-      }
-      .yd21-text-green {
-        color: #038589;
-      }
-      .quote21 {
-        font-weight: 700;
-        color: #038589;
-        font-size: 16px;
-        margin-top: 10px;
-        font-style: italic;
-      }
-      .bg-credits21 {
-        background-color: #306162;
-        margin-top: 750px;
-      }
-      .credits21 {
-        color: #fff;
-        font-family: "Be Vietnam", sans-serif;
-      }
-      .credits21 h1 {
-        text-transform: uppercase;
-        font-weight: 600;
-        display: inline-block;
-        border-bottom: 2px solid #fff;
-        padding-bottom: 2px;
-      }
-      .credits21 h1:hover {
-        cursor: pointer;
-      }
-      .credit-list h3 {
-        font-weight: 700;
-        margin: 10px 0 5px 0;
-        text-transform: uppercase;
-      }
-      .credit-list h4 {
-        font-weight: 600;
-        margin-top: 5px;
-      }
-      .credit-list p {
-        font-weight: 400;
-        margin-bottom: 10px;
-      }
-      #backtoTop {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        z-index: 1000;
-        visibility: hidden;
-      }
-      .btp i {
-        line-height: 40px;
-        text-align: center;
-        font-size: 20px;
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background-color: #f1b81b;
-        color: #fff;
-        border-radius: 50%;
-      }
-      .btp i:hover {
-        cursor: pointer;
-      }
-      #backtoTop.show {
-        opacity: 1;
-        visibility: visible;
-      }
-      @media only screen and (max-width: 768px) {
-        .bg-credits21 {
-          background-color: #306162;
-          margin-top: 0px;
-        }
-        .mobile-menu {
-          display: block;
-        }
-        .messages {
-          position: relative;
-          top: 0;
-        }
-        .yd-modal {
-          height: 100%;
-          z-index: 1050;
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          display: none;
-          overflow: hidden;
-          overflow-y: scroll;
-        }
-        .mobile-navbar-img {
-          width: 60%;
-          height: auto;
-        }
-        .fa-close {
-          font-size: 28px;
-          margin-left: 18px;
-          margin-top: 2px;
-        }
-        .m-discipline-list ul {
-          padding: 0px;
-          margin-bottom: 0;
-        }
-        .m-discipline-list > ul > li {
-          color: #fff;
-          font-weight: 700;
-          font-size: 15px;
-          padding: 7px 0;
-        }
-        .m-discipline-list > ul > li > ul > li {
-          color: #fff;
-          font-weight: 500;
-          font-size: 15px;
-          padding: 7px 0;
-        }
-        .m-discipline-list-21 a {
-          display: block;
-          color: #fff;
-          font-size: 15px;
-          padding-bottom: 15px;
-          margin-left: 5px;
-          -webkit-transition: all 0.3s linear 0s;
-          transition: all 0.3s linear 0s;
-        }
-        .on {
-        }
-        .horizontal-menu-link {
-          font-size: 14px;
-          display: block;
-          color: white;
-          text-decoration: none;
-          padding: 7px;
-          letter-spacing: 1px;
-          font-weight: 600;
-        }
-      }
-    </style>
     <title>YD22 :: Landing</title>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script type="module">
@@ -219,7 +38,7 @@
 
   <body>
     <div class="preloader-gif">
-      <img src="./load.gif" />
+      <img src="./loading.gif" />
     </div>
 
     <nav class="desktop-menu">
@@ -241,7 +60,7 @@
                   ><img
                     src="./images/nid-logo.png"
                     alt=""
-                    style="width: 8vw; height: auto; filter: invert(1)"
+                    style="width: 8vw; height: auto"
                 /></a>
               </div>
             </div>
@@ -306,29 +125,34 @@
       </div>
     </nav>
 
-    <div>
+    <div class="accordian_container">
       <div class="interesting-accordian1">
-        <div class="accordian bg-cmd">
+        <div class="accordian">
           <h1 class="accordian-titles">COMD</h1>
           <p class="accordian-details">Communication Design</p>
+          <img src="./images/cmd.svg" alt="" />
         </div>
-        <div class="accordian bg-idd">
+        <div class="accordian">
           <h1 class="accordian-titles">INDU</h1>
           <p class="accordian-details">Industrial Design</p>
+          <img src="./images/idd.svg" alt="" />
         </div>
-        <div class="accordian bg-ind">
+        <div class="accordian">
           <h1 class="accordian-titles">INTD</h1>
           <p class="accordian-details">Interdisciplinary Design</p>
+          <img src="./images/ind.svg" alt="" />
         </div>
-        <div class="accordian bg-itd">
+        <div class="accordian">
           <h1 class="accordian-titles">ITIN</h1>
           <p class="accordian-details">IT Integrated</p>
+          <img src="./images/itd.svg" alt="" />
         </div>
-        <div class="accordian bg-txd">
+        <div class="accordian">
           <h1 class="accordian-titles">TALD</h1>
           <p class="accordian-details">
             Textile, Apparel, Lifestyle & Accessory Design
           </p>
+          <img src="./images/txd.svg" alt="" />
         </div>
       </div>
     </div>
@@ -688,6 +512,7 @@
     ></script>
     <script>
       let prevScrollPos = window.pageYOffset;
+      const navbar = document.querySelector("nav");
 
       window.addEventListener("scroll", () => {
         const currentScrollPos = window.pageYOffset;

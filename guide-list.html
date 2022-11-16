@@ -44,7 +44,7 @@
 
   <body>
     <div class="preloader-gif">
-      <img src="./load.gif" />
+      <img src="./loading.gif" />
     </div>
 
     <nav class="desktop-menu">
@@ -66,7 +66,7 @@
                   ><img
                     src="./images/nid-logo.png"
                     alt=""
-                    style="width: 8vw; height: auto; filter: invert(1)"
+                    style="width: 8vw; height: auto"
                 /></a>
               </div>
             </div>
@@ -1109,6 +1109,7 @@
     ></script>
     <script>
       let prevScrollPos = window.pageYOffset;
+      const navbar = document.querySelector("nav");
 
       window.addEventListener("scroll", () => {
         const currentScrollPos = window.pageYOffset;
