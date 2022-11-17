@@ -44,7 +44,7 @@
 
   <body>
     <div class="preloader-gif">
-      <img src="./load.gif" />
+      <img src="./loading.gif" />
     </div>
 
     <nav class="desktop-menu">
@@ -452,6 +452,7 @@
     ></script>
     <script>
       let prevScrollPos = window.pageYOffset;
+      const navbar = document.querySelector("nav");
 
       window.addEventListener("scroll", () => {
         const currentScrollPos = window.pageYOffset;
