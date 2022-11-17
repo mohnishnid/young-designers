@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
 
+@font-face {
+  font-family: primary;
+  src: url(../fonts/AesthetBold.ttf);
+}
+@font-face {
+  font-family: secondary;
+  src: url(../fonts/ProximaNova-Regular.otf);
+}
+@font-face {
+  font-family: secondary_bold;
+  src: url(../fonts/ProximaNova-Bold.otf);
+}
+
+:root {
+  --cream: #f7e5da;
+  --cream_low: #f7e5da70;
+  --yellow: #ffc72c;
+  --pink: #f13281;
+  --orange: #fe6a39;
+  --purple: #792151;
+  --dark_purple: #4d163a;
+  --dark_purple_low: #4d163a20;
+  --dark_purple_high: #330e26;
+  --white: #ffffff;
+  --grey: #999999;
+  --black: #202020;
+}
+
 html {
   scroll-behavior: initial;
 }
@@ -31,8 +59,22 @@ nav {
 nav img:hover {
   opacity: 0.7;
 }
-a:hover {
+a {
+  color: var(--yellow);
+
   text-decoration: none;
+  transition: all 300ms ease;
+}
+a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+b {
+  color: var(--cream_low);
+}
+em {
+  font-style: normal;
+  color: var(--orange);
 }
 /* custom webkit scrollbar
  */
@@ -42,7 +84,7 @@ a:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: white;
+  background: var(--dark_purple);
 }
 
 /* Handle */
@@ -77,8 +119,9 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  top: -5vh;
+  height: 110vh;
   transition: all 1s ease-out;
   background-color: white;
 }
@@ -104,11 +147,12 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0;
   padding: 0;
 }
 
 .df-name {
-  color: #444;
+  color: var(--dark_purple);
   text-align: center;
   font-weight: 700;
   padding: 0.5rem;
@@ -119,7 +163,7 @@ a:hover {
 }
 
 .df-name:hover {
-  background-color: lightgrey;
+  background-color: var(--dark_purple_low);
 }
 
 .discipline-bar {
@@ -160,8 +204,17 @@ a:hover {
 .active-text-ind {
   color: #c91e59 !important;
 }
+.text-active {
+  color: var(--purple) !important;
+}
+.text-active {
+  color: var(--purple) !important;
+}
 
 /* inter diciplinary */
+.bg-cmd {
+  background-color: var(--cream);
+}
 .bg-cmd {
   background-color: #f1b81b;
 }
@@ -190,6 +243,9 @@ hr {
 
 .w-90 {
   width: 90% !important;
+}
+.w-60 {
+  width: 60% !important;
 }
 /* inter diciplinary */
 .hr-cmd-active {
@@ -228,6 +284,47 @@ hr {
 }
 
 /* inter diciplinary inactive */
+.hr-communication-inactive {
+  border: var(--yellow) solid 5px;
+  border-radius: 50px;
+  width: 70%;
+}
+.hr-industrial-inactive {
+  border: var(--orange) solid 5px;
+  border-radius: 50px;
+  width: 70%;
+}
+.hr-interd-inactive {
+  border: var(--pink) solid 5px;
+  border-radius: 50px;
+  width: 70%;
+}
+.hr-textile-inactive {
+  border: var(--purple) solid 5px;
+  border-radius: 50px;
+  width: 70%;
+}
+.hr-itintegrated-inactive {
+  border: var(--dark_purple_high) solid 5px;
+  border-radius: 50px;
+  width: 70%;
+}
+.bg-yellow {
+  background-color: var(--yellow);
+}
+.bg-orange {
+  background-color: var(--orange);
+}
+.bg-pink {
+  background-color: var(--pink);
+}
+.bg-purple {
+  background-color: var(--purple);
+}
+.bg-dark_purple {
+  background-color: var(--dark_purple_high);
+}
+/* inter diciplinary inactive */
 .hr-cmd-inactive {
   border: #f9e19f solid 5px;
   border-radius: 50px;
@@ -241,14 +338,14 @@ hr {
 }
 
 .hr-txd-inactive {
-  border: #cbb9df solid 5px;
-  border-radius: 0.25rem;
+  border: var(--orange) solid 5px;
+  border-radius: 50px;
   width: 70%;
 }
 
 .hr-itd-inactive {
-  border: #b0c6e8 solid 5px;
-  border-radius: 0.25rem;
+  border: var(--pink) solid 5px;
+  border-radius: 50px;
   width: 70%;
 }
 
@@ -321,6 +418,9 @@ hr {
 .discipline-bar .col a {
   color: #fff;
 }
+.discipline-bar .col a.disp_active {
+  color: var(--purple);
+}
 .discipline-bar .col-3 {
   padding: 12px 3px;
 
@@ -337,11 +437,15 @@ hr {
 }
 
 .bg-g {
-  background-color: #f1f1f1;
+  background-color: var(--cream);
+  color: var(--dark_purple);
+}
+.bg-g a {
+  font-weight: bold;
+  color: var(--dark_purple);
 }
 .bg-b-g {
-  background-color: #fff;
-  border-bottom: 1px solid lightgrey;
+  background-color: var(--cream);
 }
 
 .align_center {
@@ -397,12 +501,12 @@ hr {
   font-weight: 600;
   font-size: 14px;
 
-  color: #979797;
+  color: var(--grey);
   bottom: 0;
 }
 
 .project-title {
-  color: #488e9a;
+  color: gray;
   font-size: 30px;
   font-weight: 800;
   margin-bottom: 15px;
@@ -410,7 +514,7 @@ hr {
 }
 
 .project-synopsis {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 5px;
   padding-bottom: 0;
 }
@@ -418,7 +522,7 @@ hr {
 .student-name,
 .guide,
 .sponsor {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 5px;
   padding-bottom: 0;
 }
@@ -435,7 +539,7 @@ a.current-discipline,
 }
 
 .current:hover {
-  background-color: #22437980;
+  background-color: var(--cream_low);
 }
 
 .student-detail {
@@ -590,7 +694,9 @@ span.two {
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
+.accordian img {
+  opacity: 0.2;
+}
 /**
  * Submenu
  -----------------------------*/
@@ -630,10 +736,15 @@ span.two {
 }
 
 /* INTACC */
+
+.accordian_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark_purple);
+}
 .interesting-accordian1 {
-  max-width: 90vw;
-  padding: 30vh 5vw 10vh 5vw;
-  box-sizing: content-box;
+  max-width: 80vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -646,8 +757,8 @@ span.two {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 20vh;
-  width: 10vw;
+  height: 10vh;
+  width: 6vw;
   padding: auto;
   cursor: pointer;
   overflow: hidden;
@@ -662,7 +773,7 @@ span.two {
 
   text-align: center;
   transition: all 0.5s ease;
-  font-size: 1.5vw;
+  font-size: 16px;
 }
 
 .interesting-accordian1 .accordian-details {
@@ -686,6 +797,9 @@ span.two {
 
 .interesting-accordian1 .accordian:hover .accordian-details {
   opacity: 1;
+}
+.interesting-accordian1 .accordian:hover img {
+  transform: rotate(90deg);
 }
 
 @media only screen and (max-width: 768px) {

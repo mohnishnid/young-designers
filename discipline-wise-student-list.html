@@ -49,15 +49,15 @@
 
     <nav class="desktop-menu">
       <div>
-        <div class="container-fluid pt-2 pb-3 px-5 bg-b-g">
+        <div class="container-fluid bg-b-g">
           <div class="row justify-content-between align-items-center">
             <div class="row justify-content-around align-items-center">
               <div class="col text-left my-auto">
                 <a href="./index.html"
                   ><img
-                    src="./images/conv42.png"
+                    src="./loading.gif"
                     alt=""
-                    style="width: 6vw; height: auto"
+                    style="width: 12vw; height: auto"
                 /></a>
               </div>
               <div>•</div>
@@ -66,12 +66,12 @@
                   ><img
                     src="./images/nid-logo.png"
                     alt=""
-                    style="width: 8vw; height: auto; filter: invert(1)"
+                    style="width: 10vw; height: 100%"
                 /></a>
               </div>
             </div>
-            <div class="col-9 p-0">
-              <div class="col p-0">
+            <div class="col-9 p-0 w-60">
+              <div class="col px-0">
                 <div class="row design-faculty-bar align_center">
                   <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class="">
@@ -79,7 +79,7 @@
                         >COMMUNICATION DESIGN</span
                       ></a
                     >
-                    <div class="hr-cmd-inactive"></div>
+                    <div class="hr-communication-inactive"></div>
                   </div>
                   <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
@@ -87,7 +87,7 @@
                         >INDUSTRIAL DESIGN</span
                       ></a
                     >
-                    <div class="hr-idd-inactive"></div>
+                    <div class="hr-industrial-inactive"></div>
                   </div>
                   <div class="col text-center">
                     <a href="./discipline-wise-student-list.html" class=""
@@ -95,23 +95,7 @@
                         >INTERDISCIPLINARY DESIGN</span
                       ></a
                     >
-                    <div class="hr-ind-inactive"></div>
-                  </div>
-
-                  <div class="col text-center">
-                    <a href="./discipline-wise-student-list.html"
-                      ><span class="d-inline-block df-name"
-                        >IT INTEGRATED</span
-                      ></a
-                    >
-                    <div
-                      class="hr-itd-active"
-                      style="
-                        position: absolute;
-                        bottom: -1.2rem;
-                        border-width: 15px !important;
-                      "
-                    ></div>
+                    <div class="hr-interd-inactive"></div>
                   </div>
                   <div class="col justify-content-center">
                     <a href="./discipline-wise-student-list.html" class=""
@@ -120,8 +104,25 @@
                         DESIGN</span
                       ></a
                     >
-                    <div class="hr-txd-inactive"></div>
+                    <div class="hr-textile-inactive"></div>
                   </div>
+                  <div class="col text-center">
+                    <a href="./discipline-wise-student-list.html"
+                      ><span class="d-inline-block df-name"
+                        >IT INTEGRATED</span
+                      ></a
+                    >
+                    <div
+                      style="
+                        position: absolute;
+                        border-width: 30px;
+                        border-radius: 0.5rem 0.5rem 0 0;
+                        margin-bottom: -95px;
+                      "
+                      class="hr-itintegrated-inactive"
+                    ></div>
+                  </div>
+
                   <div class="col text-center">
                     <a href="./guide-list.html" class=""
                       ><span class="d-inline-block df-name"
@@ -136,7 +137,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid bg-itd p-2">
+      <div class="container-fluid bg-dark_purple p-2">
         <div class="container discipline-bar">
           <div class="row justify-content-md-center">
             <div class="col text-center current rounded">
@@ -149,8 +150,10 @@
                 >Information Design</a
               >
             </div>
-            <div class="col text-center current active-itd rounded">
-              <a href="./discipline-wise-student-list.html?q=intd"
+            <div class="col text-center bg-cream current text-active rounded">
+              <a
+                class="disp_active"
+                href="./discipline-wise-student-list.html?q=intd"
                 >Interaction Design</a
               >
             </div>
@@ -163,14 +166,94 @@
         </div>
       </div>
     </nav>
+    <div class="menu" data-lenis-prevent>
+      <img
+        style="width: 30%; padding-top: 5vh"
+        src="./images/conv42.png"
+        alt=""
+      />
+      <div class="data">
+        <ul id="accordion" class="accordion">
+          <li>
+            <div class="link hr-cmd">
+              <span>COMMUNICATION DESIGN</span> <span>+</span>
+            </div>
 
+            <ul class="submenu">
+              <li><a href="#">Animation Film Design</a></li>
+              <li><a href="#">Exhibition Design</a></li>
+              <li><a href="#">Film & Video Communication</a></li>
+              <li><a href="#">Graphic Design </a></li>
+              <li><a href="#">Photography Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-idd">
+              <span>INDUSTRIAL DESIGN</span> <span>+</span>
+            </div>
+
+            <ul class="submenu">
+              <li><a href="#">Ceramic & Glass Design </a></li>
+              <li><a href="#">Furniture Design </a></li>
+              <li><a href="#">Furniture & Interior Design </a></li>
+              <li><a href="#">Product Design </a></li>
+              <li><a href="#">Transportation & Automobile Design </a></li>
+              <li><a href="#">Toy & Game Design </a></li>
+              <li><a href="#">Universal Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-txd">
+              <span>INTERDISCIPLINARY DESIGN</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Design for Retail Experience </a></li>
+              <li><a href="#">Strategic Design Management </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-itd">
+              <span>IT INTEGRATED</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Digital Game Design </a></li>
+              <li><a href="#">Information Design </a></li>
+              <li><a href="#">Interaction Design </a></li>
+              <li><a href="#">New Media Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-ind">
+              <span>TEXTILE, APPAREL, LIFESTYLE &amp; ACCESSORY DESIGN</span>
+              <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Apparel Design </a></li>
+              <li><a href="#">Lifestyle Accessory Design </a></li>
+              <li><a href="#">Textile Design </a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link hr-sort">
+              <span>SORT BY GUIDE</span> <span>+</span>
+            </div>
+            <ul class="submenu">
+              <li><a href="#">Guides</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div
       class="container-fluid mt-4 project-list"
-      style="padding-top: 15vh; padding-left: 10vw; padding-right: 10vw"
+      style="padding-top: 20vh; padding-left: 10vw; padding-right: 10vw"
     >
       <div class="row my-4 mb-5">
         <div class="col text-center">
-          <img src="./images/yd21-INTD 1.png" class="img-fluid rounded" />
+          <img
+            src="https://youngdesigners.nid.edu/images/guide-banner.png"
+            class="img-fluid w-90 rounded"
+          />
         </div>
       </div>
 
@@ -346,14 +429,13 @@
       </div>
     </div>
     <div class="container-fluid p-5">
-      <div class="row justify-content-between rounded-pill text-dark p-3 bg-g">
-        <a href=""><div class="col text-dark">Credits</div></a>
+      <div class="row justify-content-between rounded p-3 bg-g">
+        <a href=""><div class="col">Credits</div></a>
         <a href="./index.html">
-          <div class="col text-right text-dark">← Go to Home Page</div></a
+          <div class="col text-right">← Go to Home Page</div></a
         >
       </div>
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.js"
       type="text/javascript"
@@ -375,7 +457,7 @@
         if (prevScrollPos > currentScrollPos) {
           navbar.style.transform = "translateY(0%)";
         } else {
-          navbar.style.transform = "translateY(-65%)";
+          navbar.style.transform = "translateY(-100%)";
         }
 
         prevScrollPos = currentScrollPos;
